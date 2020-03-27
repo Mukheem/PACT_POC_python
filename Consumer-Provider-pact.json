@@ -1,0 +1,30 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "providerState": "User ML exists and is not an administrator",
+      "description": "a request for ML",
+      "request": {
+        "method": "GET",
+        "path": "/api"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "skip": 0,
+          "limit": 150
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
