@@ -3,20 +3,17 @@ import json
 from http_server_mock import HttpServerMock
 from flask import Flask, request
 import requests
+
 app = HttpServerMock(__name__)
 
 
 @app.route('/setup', methods=['POST'])
 def hello():
-    print('Yaay...I am called')
     print(request.json)
-    if request.json['state'] == 'User ML exists and is not an administrator':
-        print('Yaay')
-        return {'skip': 0, 'limit': 151}
+    if request.json['state'] == 'A Support User exists and is not an administrator':
+        return {'State': True}
     else:
-        print('daai')
-        #return {'skip': 0, 'limit': 150}
-
+        return {'State': False}
 
 
 with app.run("localhost", 8082):

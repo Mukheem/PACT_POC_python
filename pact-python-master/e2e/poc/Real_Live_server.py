@@ -1,12 +1,18 @@
 from http_server_mock import HttpServerMock
 from flask import Flask
 import requests
+
 app = HttpServerMock(__name__)
 
 
 @app.route('/api')
 def hello():
     return {'skip': 0, 'limit': 150}
+
+
+@app.route('/api/details')
+def hell():
+    return {'skip': 0}
 
 
 with app.run("localhost", 8081):

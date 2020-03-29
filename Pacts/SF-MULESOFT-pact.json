@@ -1,14 +1,14 @@
 {
   "consumer": {
-    "name": "ConsumerPOC"
+    "name": "SF"
   },
   "provider": {
-    "name": "Provider"
+    "name": "MULESOFT"
   },
   "interactions": [
     {
-      "providerState": "User ML exists and is not an administrator",
-      "description": "a request for ML",
+      "providerState": "A Support User exists and is not an administrator",
+      "description": "a request for API support",
       "request": {
         "method": "GET",
         "path": "/api"
