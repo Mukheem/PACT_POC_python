@@ -10,6 +10,7 @@ app = HttpServerMock(__name__)
 @app.route('/setup', methods=['POST'])
 def hello():
     print(request.json)
+    # Setting up state as needed by the PACT. i.e., Consumer to proceed with provider testing.
     if request.json['state'] == 'A Support User exists and is not an administrator':
         return {'State': True}
     else:
