@@ -13,6 +13,8 @@ def hello():
     # Setting up state as needed by the PACT. i.e., Consumer to proceed with provider testing.
     if request.json['state'] == 'A Support User exists and is not an administrator':
         return {'State': True}
+    elif request.json['state'] == 'A Support user has access to hit post request':
+        return {'State': True}
     else:
         return {'State': False}
 

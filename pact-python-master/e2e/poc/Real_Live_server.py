@@ -14,6 +14,9 @@ def hello():
 def hell():
     return {'skip': 0}
 
+@app.route('/user', methods=['POST'])
+def user():
+    return {'user' : 'Muqeem'}
 
 with app.run("localhost", 8081):
     r = requests.get("http://localhost:8081/")
