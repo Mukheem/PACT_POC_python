@@ -50,7 +50,7 @@ class Generate_POC_PACTS(unittest.TestCase):
             path='/api/register',
             body=input_data,
             # headers={'Content-Type': 'application/json'},
-        ).will_respond_with(200, body=expected)
+        ).will_respond_with(200, body=expected) # This will respond with actual sample data in it. But not with the objects
 
         # When a request is hit to Server, would it retrieve the expected data
         with pact:
